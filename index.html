@@ -9,18 +9,15 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Icons -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
 </head>
+
 
 <body>
 
-<!-- Navigation -->
 <header>
     <nav>
-        <h2 class="logo">Aleena<span>.</span></h2>
+        <h2 class="logo">Aleena.</h2>
 
         <ul>
             <li><a href="#home">Home</a></li>
@@ -33,11 +30,12 @@
 </header>
 
 
-<!-- Hero Section -->
 
-<section id="home" class="hero">
+<!-- HOME -->
 
-    <div class="hero-text">
+<section id="home">
+
+    <div class="hero">
 
         <p class="terminal">
             root@aleena:~$ whoami
@@ -47,66 +45,56 @@
             Hi, I'm <span>Aleena Jibi</span>
         </h1>
 
+
         <h2>
-            <span class="typing"></span>
+            Aspiring Cyber Security Analyst | IoT Security Enthusiast
         </h2>
 
 
         <p>
-            MSc Cyber Security student passionate about 
-            penetration Learner, IoT security, and building secure systems.
+            MSc Cyber Security and Emerging Threats student passionate about
+            penetration testing, IoT security, vulnerability assessment,
+            and building secure systems.
         </p>
 
 
         <div class="buttons">
 
-    <a href="resume.pdf" download>
-        <button>
-            <i class="fa-solid fa-download"></i>
-            Download CV
-        </button>
-    </a>
+            <a href="assets/resume.pdf" download>
+                Download CV
+            </a>
 
-    <a href="#contact">
-        <button class="outline">
-            Contact Me
-        </button>
-    </a>
+            <a href="#contact">
+                Contact Me
+            </a>
 
-</div>
-
-
-
-    <div class="profile">
-
-        <img src="./profile.jpg" alt="Aleena Jibi">
+        </div>
 
     </div>
-
 
 </section>
 
 
 
-<!-- About -->
+
+<!-- ABOUT -->
 
 <section id="about">
 
-<h2 class="title">
-    About Me
-</h2>
+<h2>About Me</h2>
 
 
-<p class="about-text">
+<p>
 
-I am an MSc Cyber Security and Emerging Threats student at 
-Middlesex University London. 
+I am an MSc Cyber Security and Emerging Threats student at Middlesex
+University London with a strong interest in penetration testing,
+vulnerability assessment, IoT security, and AI-driven cybersecurity solutions.
 
-My interests include penetration testing, vulnerability assessment,
-machine learning based intrusion detection systems, and IoT security.
+<br><br>
 
-I enjoy creating practical cybersecurity projects using Python,
-Linux, and security tools.
+I enjoy developing practical security projects using Python, Linux,
+machine learning techniques, and cybersecurity tools to understand
+real-world threats and build defensive solutions.
 
 </p>
 
@@ -116,67 +104,30 @@ Linux, and security tools.
 
 
 
-<!-- Skills -->
+
+<!-- SKILLS -->
 
 <section id="skills">
 
-<h2 class="title">
-    Technical Skills
-</h2>
+<h2>Technical Skills</h2>
 
 
 <div class="skills-container">
 
-
-<div class="skill">
-<p>Python</p>
-<div class="bar">
-<span style="width:90%"></span>
-</div>
-</div>
-
-
-<div class="skill">
-<p>Linux / Kali Linux</p>
-<div class="bar">
-<span style="width:85%"></span>
-</div>
-</div>
-
-
-<div class="skill">
-<p>Wireshark</p>
-<div class="bar">
-<span style="width:80%"></span>
-</div>
-</div>
-
-
-<div class="skill">
-<p>Burp Suite</p>
-<div class="bar">
-<span style="width:75%"></span>
-</div>
-</div>
-
-
-<div class="skill">
-<p>Machine Learning Security</p>
-<div class="bar">
-<span style="width:85%"></span>
-</div>
-</div>
-
-
-<div class="skill">
-<p>BLE / IoT Security</p>
-<div class="bar">
-<span style="width:75%"></span>
-</div>
-</div>
-
+<div>Python</div>
+<div>Linux / Kali Linux</div>
+<div>Wireshark</div>
+<div>Burp Suite</div>
+<div>Penetration Testing</div>
+<div>Network Security</div>
+<div>Machine Learning Security</div>
+<div>BLE / IoT Security</div>
+<div>Django</div>
+<div>Scapy</div>
+<div>Git & GitHub</div>
 
 </div>
+
 
 </section>
 
@@ -184,119 +135,180 @@ Linux, and security tools.
 
 
 
-<!-- Projects -->
+<!-- PROJECTS -->
 
 <section id="projects">
+
+<h2>Projects</h2>
+
 
 
 <div class="projects-container">
 
-    <!-- DetectDefend IDS -->
-    <div class="project-card">
-        <img src="assets/images/detectdefend.png" alt="DetectDefend IDS">
-
-        <h3>DetectDefend IDS</h3>
-
-        <p>
-            A Machine Learning based Intrusion Detection System that detects
-            and classifies network attacks using Python. The system includes
-            traffic analysis, attack classification, model evaluation and
-            Explainable AI using SHAP.
-        </p>
-
-        <div class="tech-stack">
-            <span>Python</span>
-            <span>XGBoost</span>
-            <span>Random Forest</span>
-            <span>SHAP</span>
-            <span>Cybersecurity</span>
-        </div>
-
-        <a href="https://github.com/aleenajibi/DetectDefend-IDS" target="_blank">
-            View GitHub
-        </a>
-    </div>
 
 
-    <!-- Network Monitoring IDS IPS Django -->
-    <div class="project-card">
-        <img src="assets/images/network-ids.png" alt="Network Monitoring IDS IPS">
+<!-- BLE -->
 
-        <h3>Network Monitoring IDS/IPS using Django</h3>
+<div class="project-card">
 
-        <p>
-            A real-time network monitoring and Intrusion Detection/Prevention
-            System using Python, Scapy and Django. The system captures traffic,
-            detects suspicious behaviour, generates alerts and blocks attackers
-            using firewall rules.
-        </p>
+<h3>📡 BLE Security Auditing Framework</h3>
 
-        <div class="tech-stack">
-            <span>Python</span>
-            <span>Django</span>
-            <span>Scapy</span>
-            <span>iptables</span>
-            <span>Network Security</span>
-        </div>
-
-        <a href="https://github.com/aleenajibi/Network-Monitoring-IDS-IPS-Django" target="_blank">
-            View GitHub
-        </a>
-    </div>
+<p>
+MSc dissertation project developing a Python-based Bluetooth Low Energy
+security auditing framework for IoT devices. The framework focuses on BLE
+device discovery, GATT service analysis, vulnerability identification,
+and security assessment.
+</p>
 
 
-    <!-- AI Based IDS -->
-    <div class="project-card">
-        <img src="assets/images/ai-ids.png" alt="AI Based IDS">
+<div class="tags">
 
-        <h3>AI-Based Intrusion Detection System</h3>
+<span>Python</span>
+<span>BLE</span>
+<span>IoT Security</span>
+<span>Kali Linux</span>
 
-        <p>
-            An AI-driven IDS that uses Machine Learning and Deep Learning
-            techniques to detect malicious network traffic. The project
-            compares Random Forest, SVM and Neural Network models for attack
-            classification.
-        </p>
-
-        <div class="tech-stack">
-            <span>Python</span>
-            <span>PyTorch</span>
-            <span>Scikit-learn</span>
-            <span>Machine Learning</span>
-            <span>Deep Learning</span>
-        </div>
-
-        <a href="https://github.com/aleenajibi/AI-Based-Intrusion-Detection-System" target="_blank">
-            View GitHub
-        </a>
-    </div>
+</div>
 
 
-    <!-- BLE Security Framework -->
-    <div class="project-card">
-        <img src="assets/images/ble-framework.png" alt="BLE Security Framework">
+<p>
+<strong>Status:</strong> MSc Dissertation Project - Ongoing
+</p>
 
-        <h3>BLE Security Auditing Framework</h3>
 
-        <p>
-            An ongoing MSc dissertation project developing a Python-based
-            Bluetooth Low Energy security auditing framework for IoT devices.
-            The framework focuses on BLE discovery, GATT analysis and
-            vulnerability assessment.
-        </p>
+</div>
 
-        <div class="tech-stack">
-            <span>Python</span>
-            <span>BLE</span>
-            <span>IoT Security</span>
-            <span>Kali Linux</span>
-            <span>Cybersecurity</span>
-        </div>
 
-        <p class="status">
-            MSc Dissertation Project - Ongoing
-        </p>
-    </div>
+
+
+
+<!-- DetectDefend -->
+
+
+<div class="project-card">
+
+<h3>🛡️ DetectDefend IDS</h3>
+
+
+<p>
+A Machine Learning based Intrusion Detection System that detects and
+classifies network attacks using Python. The system includes traffic
+analysis, attack classification, model evaluation and Explainable AI
+using SHAP.
+</p>
+
+
+<div class="tags">
+
+<span>Python</span>
+<span>XGBoost</span>
+<span>Random Forest</span>
+<span>SHAP</span>
+<span>Cybersecurity</span>
+
+</div>
+
+
+
+<a href="https://github.com/aleenajibi/DetectDefend-IDS"
+target="_blank">
+
+View GitHub
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+<!-- AI IDS -->
+
+
+<div class="project-card">
+
+
+<h3>🤖 AI-Based Intrusion Detection System</h3>
+
+
+<p>
+An AI-driven Intrusion Detection System using Machine Learning and Deep
+Learning models to detect and classify malicious network traffic.
+The project compares Random Forest, SVM and Neural Network models.
+</p>
+
+
+
+<div class="tags">
+
+<span>Python</span>
+<span>PyTorch</span>
+<span>Scikit-learn</span>
+<span>Machine Learning</span>
+<span>Deep Learning</span>
+
+</div>
+
+
+
+<a href="https://github.com/aleenajibi/AI-Based-Intrusion-Detection-System"
+target="_blank">
+
+View GitHub
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+<!-- Django IDS -->
+
+
+<div class="project-card">
+
+
+<h3>🌐 Network Monitoring IDS/IPS using Django</h3>
+
+
+<p>
+A real-time network monitoring and Intrusion Detection/Prevention System
+using Python, Scapy and Django. The system captures traffic, detects
+suspicious behaviour, generates alerts and blocks attackers using
+firewall rules.
+</p>
+
+
+<div class="tags">
+
+<span>Python</span>
+<span>Django</span>
+<span>Scapy</span>
+<span>iptables</span>
+<span>Network Security</span>
+
+</div>
+
+
+
+<a href="https://github.com/aleenajibi/Network-Monitoring-IDS-IPS-Django"
+target="_blank">
+
+View GitHub
+
+</a>
+
+
+</div>
+
+
 
 </div>
 
@@ -307,36 +319,31 @@ Linux, and security tools.
 
 
 
-<!-- Certificates -->
+
+<!-- CERTIFICATES -->
 
 
 <section id="certificates">
 
-
-<h2 class="title">
-Certificates
-</h2>
+<h2>Certificates</h2>
 
 
-<div class="timeline">
-
+<div class="certificate">
 
 <p>
-<b>Ethical Hacking</b>
-<br>
+<strong>Ethical Hacking</strong><br>
 RedTeam Academy
 </p>
 
 
 <p>
-<b>Offensive Cyber Security Analyst (OCSA)</b>
-<br>
+<strong>Offensive Cyber Security Analyst (OCSA)</strong><br>
 Offenso Academy
 </p>
 
 
 <p>
-<b>IBM Cybersecurity Courses</b>
+<strong>IBM Cybersecurity Courses</strong>
 </p>
 
 
@@ -349,43 +356,42 @@ Offenso Academy
 
 
 
-<!-- Contact -->
+
+<!-- CONTACT -->
 
 
 <section id="contact">
 
 
-<h2 class="title">
-Contact
-</h2>
+<h2>Contact</h2>
 
 
-<div class="contact">
-
-
+<p>
+✉ Email:
 <a href="mailto:jibialeena0987@gmail.com">
-<i class="fa-solid fa-envelope"></i>
-Email
+jibialeena0987@gmail.com
 </a>
+</p>
 
 
+<p>
+🐙 GitHub:
 <a href="https://github.com/aleenajibi">
-<i class="fa-brands fa-github"></i>
-GitHub
+github.com/aleenajibi
 </a>
+</p>
 
 
-
-<a href="https://linkedin.com/in/aleena-jibi-a25707411">
-<i class="fa-brands fa-linkedin"></i>
-LinkedIn
+<p>
+💼 LinkedIn:
+<a href="https://linkedin.com">
+LinkedIn Profile
 </a>
-
-
-</div>
+</p>
 
 
 </section>
+
 
 
 
@@ -400,12 +406,8 @@ Built with HTML • CSS • JavaScript
 © 2026 Aleena Jibi | Always Learning • Always Securing
 </p>
 
+
 </footer>
-
-
-
-
-<script src="script.js"></script>
 
 
 </body>
