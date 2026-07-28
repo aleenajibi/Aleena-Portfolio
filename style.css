@@ -292,73 +292,48 @@ section {
 /* PROJECTS */
 
 
-.project-container {
-
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
-
-
-.card {
-
-    background:#111;
-    padding:30px;
-    border:1px solid #333;
-    border-radius:10px;
-    transition:.3s;
-
+.project-card {
+    padding: 20px;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
-
-
-.card:hover {
-
-    border-color:#00ff88;
-    transform:translateY(-10px);
-
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-
-
-.card h3 {
-
-    color:#00ff88;
-    margin-bottom:15px;
-
+.project-card h3 {
+    margin-top: 15px;
 }
 
-
-
-.card p {
-
-    color:#ccc;
-    line-height:1.6;
-
+.tech-stack span {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 20px;
+    background: #eee;
+    font-size: 13px;
 }
 
-
-
-.tech {
-
-    margin:15px 0;
-    color:#00ff88 !important;
-
+.project-card a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
 }
 
-
-
-.card a {
-
-    color:white;
-    text-decoration:none;
-    border-bottom:1px solid #00ff88;
-
+.status {
+    font-style: italic;
 }
-
-
 
 
 
