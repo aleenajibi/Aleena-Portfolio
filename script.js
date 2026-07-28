@@ -1,117 +1,55 @@
-// ===============================
-// Smooth Scrolling Navigation
-// ===============================
+// Smooth scrolling
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
+document.querySelectorAll("a[href^='#']").forEach(link => {
 
-    link.addEventListener("click", function(e) {
+    link.addEventListener("click", function(e){
 
-        const target = document.querySelector(this.getAttribute("href"));
+        e.preventDefault();
 
-        if (target) {
-            e.preventDefault();
-
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
-
-    });
-
-});
-
-
-// ===============================
-// Project Card Scroll Animation
-// ===============================
-
-const projectCards = document.querySelectorAll(".project-card");
-
-
-const observer = new IntersectionObserver(
-    (entries) => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add("show");
-
-            }
-
+        document.querySelector(this.getAttribute("href"))
+        .scrollIntoView({
+            behavior:"smooth"
         });
 
-    },
-    {
-        threshold: 0.2
-    }
-);
-
-
-projectCards.forEach(card => {
-
-    observer.observe(card);
+    });
 
 });
 
 
-// ===============================
-// Typing Effect (Terminal Style)
-// ===============================
 
-const text = "IoT Security Researcher";
+// Project card animation
 
-let index = 0;
-
-const typingElement = document.querySelector(".typing");
+const cards=document.querySelectorAll(".project-card");
 
 
-function typeEffect() {
+window.addEventListener("scroll",()=>{
 
-    if (typingElement && index < text.length) {
+cards.forEach(card=>{
 
-        typingElement.innerHTML += text.charAt(index);
+let position=card.getBoundingClientRect().top;
 
-        index++;
+let screen=window.innerHeight;
 
-        setTimeout(typeEffect, 100);
 
-    }
+if(position < screen - 100){
+
+card.style.opacity="1";
+card.style.transform="translateY(0)";
 
 }
 
-
-typeEffect();
-
-
-// ===============================
-// Mobile Menu Toggle
-// ===============================
-
-const menuButton = document.querySelector(".menu-btn");
-const navMenu = document.querySelector("nav ul");
+});
 
 
-if(menuButton){
-
-    menuButton.addEventListener("click", () => {
-
-        navMenu.classList.toggle("active");
-
-    });
-
-}
+});
 
 
-// ===============================
-// Update Copyright Year
-// ===============================
+// Initial animation
 
-const year = document.querySelector("#year");
+cards.forEach(card=>{
 
+card.style.opacity="0";
+card.style.transform="translateY(40px)";
+card.style.transition="0.6s";
 
-if(year){
-
-    year.textContent = new Date().getFullYear();
-
-}
+});
