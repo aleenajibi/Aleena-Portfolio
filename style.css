@@ -279,7 +279,59 @@ color:#ffcc00;
 
 }
 
+/* EXPERIENCE */
 
+#experience {
+    padding: 50px 10%;
+}
+
+
+.experience-card {
+
+    background: #111827;
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 4px solid #22c55e;
+    transition: 0.3s;
+
+}
+
+
+.experience-card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+
+.experience-card h3 {
+
+    color: #22c55e;
+    font-size: 24px;
+
+}
+
+
+.experience-card h4 {
+
+    color: #c084fc;
+
+}
+
+
+.experience-card p {
+
+    color: #ddd;
+    line-height: 1.7;
+
+}
+
+
+.details {
+
+    margin-top:20px;
+
+}
 
 
 
