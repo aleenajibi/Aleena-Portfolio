@@ -1,66 +1,82 @@
-// Typing Animation
+// ===============================
+// Smooth Scrolling Navigation
+// ===============================
 
-const roles = [
-    "Penetration Tester",
-    "Cyber Security Student",
-    "IoT Security Researcher",
-    "Python Developer"
-];
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+    link.addEventListener("click", function(e) {
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if (target) {
+            e.preventDefault();
+
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+    });
+
+});
 
 
-let roleIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
+// ===============================
+// Project Card Scroll Animation
+// ===============================
 
+const projectCards = document.querySelectorAll(".project-card");
+
+
+const observer = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("show");
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.2
+    }
+);
+
+
+projectCards.forEach(card => {
+
+    observer.observe(card);
+
+});
+
+
+// ===============================
+// Typing Effect (Terminal Style)
+// ===============================
+
+const text = "IoT Security Researcher";
+
+let index = 0;
 
 const typingElement = document.querySelector(".typing");
 
 
 function typeEffect() {
 
-    const currentRole = roles[roleIndex];
+    if (typingElement && index < text.length) {
 
+        typingElement.innerHTML += text.charAt(index);
 
-    if (!isDeleting) {
+        index++;
 
-        typingElement.textContent =
-        currentRole.substring(0, charIndex++);
-
-
-        if (charIndex > currentRole.length) {
-
-            isDeleting = true;
-
-            setTimeout(typeEffect, 1200);
-            return;
-
-        }
-
-    } else {
-
-
-        typingElement.textContent =
-        currentRole.substring(0, charIndex--);
-
-
-        if (charIndex === 0) {
-
-            isDeleting = false;
-
-            roleIndex++;
-
-            if (roleIndex === roles.length) {
-
-                roleIndex = 0;
-
-            }
-
-        }
+        setTimeout(typeEffect, 100);
 
     }
-
-
-    setTimeout(typeEffect, isDeleting ? 50 : 100);
 
 }
 
@@ -68,72 +84,34 @@ function typeEffect() {
 typeEffect();
 
 
+// ===============================
+// Mobile Menu Toggle
+// ===============================
+
+const menuButton = document.querySelector(".menu-btn");
+const navMenu = document.querySelector("nav ul");
 
 
+if(menuButton){
 
-// Navbar shadow when scrolling
+    menuButton.addEventListener("click", () => {
 
-window.addEventListener("scroll", function(){
-
-    const header = document.querySelector("header");
-
-
-    if(window.scrollY > 50){
-
-        header.style.boxShadow =
-        "0 0 20px rgba(0,255,136,0.3)";
-
-    }
-
-    else{
-
-        header.style.boxShadow = "none";
-
-    }
-
-});
-
-
-
-
-
-// Reveal animation for sections
-
-const sections = document.querySelectorAll("section");
-
-
-const observer = new IntersectionObserver((entries)=>{
-
-
-    entries.forEach(entry=>{
-
-
-        if(entry.isIntersecting){
-
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-
-        }
-
+        navMenu.classList.toggle("active");
 
     });
 
-
-},{
-
-    threshold:0.2
-
-});
+}
 
 
+// ===============================
+// Update Copyright Year
+// ===============================
 
-sections.forEach(section=>{
-
-    section.style.opacity="0";
-    section.style.transform="translateY(40px)";
-    section.style.transition="0.8s";
+const year = document.querySelector("#year");
 
 
-    observer.observe(section);
+if(year){
 
-});
+    year.textContent = new Date().getFullYear();
+
+}
